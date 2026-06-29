@@ -1,0 +1,27 @@
+<svg width="680" height="340" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="680" height="340" fill="#ffffff"/>
+
+  <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#2C2C2A">
+    5 units in stock, 20 customers buy concurrently
+  </text>
+
+  <line x1="100" y1="270" x2="600" y2="270" stroke="#B4B2A9" stroke-width="1"/>
+  <line x1="100" y1="60" x2="100" y2="270" stroke="#B4B2A9" stroke-width="1"/>
+
+  <line x1="100" y1="237" x2="600" y2="237" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="3 4"/>
+  <text x="608" y="241" font-size="12" fill="#5F5E5A">5 (correct)</text>
+
+  <!-- Unsafe bar: 20 sold, scaled out of max 25 -> height = 20/25*210 = 168 -->
+  <rect x="220" y="102" width="120" height="168" rx="4" fill="#FAECE7" stroke="#D85A30" stroke-width="1.5"/>
+  <text x="280" y="92" text-anchor="middle" font-size="14" font-weight="600" fill="#712B13">20 "sold"</text>
+  <text x="280" y="294" text-anchor="middle" font-size="13" fill="#444441">Unsafe</text>
+  <text x="280" y="310" text-anchor="middle" font-size="12" fill="#5F5E5A">read-check-write</text>
+
+  <!-- Safe bar: 5 sold, scaled out of max 25 -> height = 5/25*210 = 42 -->
+  <rect x="420" y="228" width="120" height="42" rx="4" fill="#E1F5EE" stroke="#1D9E75" stroke-width="1.5"/>
+  <text x="480" y="218" text-anchor="middle" font-size="14" font-weight="600" fill="#085041">5 sold</text>
+  <text x="480" y="294" text-anchor="middle" font-size="13" fill="#444441">Atomic</text>
+  <text x="480" y="310" text-anchor="middle" font-size="12" fill="#5F5E5A">UPDATE ... WHERE</text>
+
+  <text x="30" y="170" text-anchor="middle" font-size="11" fill="#888780" transform="rotate(-90 30 170)">Orders accepted</text>
+</svg>
